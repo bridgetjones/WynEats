@@ -1,0 +1,24 @@
+<!-- <div id="container">
+  <div id="input"></div>
+  <input type="text" id="hiddenInput">
+</div>
+
+<%= form_tag userinput_path, :method => 'get' do %>
+   <%= text_field_tag :userinput, params[:userinput], placeholder: "Pizza" %>
+  <div><%= submit_tag 'Submit' %></div>
+<% end %> -->
+
+<!--
+<h4>Testing</h4> -->
+
+<%= form_tag userinput_path, :method => 'get' do %>
+   <%= text_field_tag :userinput, params[:userinput], placeholder: "Pizza" %>
+  <div><%= submit_tag 'Submit' %></div>
+<% end %>
+
+<button id="button" name="EnterSite">Submit</button>
+<textarea id="userinput"></textarea>
+<div id="container">
+  <div id="input"></div>
+  <input type="text" id="hiddenInput">
+</div>

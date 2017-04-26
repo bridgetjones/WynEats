@@ -1,0 +1,173 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+$wyncode-blue: rgba(41, 187, 179, 1);
+
+body {
+  background-color: $wyncode-blue;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 40px;
+  color: #ffffff;
+}
+#button {
+  background-color: #187;
+  border: 2px solid white;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 250px;
+  // margin-left: 475px;
+  position: fixed;
+  top: 75%;
+  left: 52.5%;
+  margin-top: 30px;
+  margin-left: -100px;
+
+}
+
+#button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#userinput {
+  background-color: #1;
+  border: 2px solid white;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 250px;
+  // margin-left: 475px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 30px;
+  margin-left: -100px;
+
+}
+#hiddenInput {
+  font-size: 40px;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #rgba(42, 191, 183, 0.75);
+  position: absolute;
+  opacity: 0.4;
+  margin-top: -22px;
+  margin-left: -125px;
+  opacity: 0;
+  filter: alpha(opacity = 0);
+}
+
+#container {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}
+
+#input {
+  // position: absolute;
+  // margin-top: -20px;
+  width: 100%;
+  text-align: center;
+}
+
+.letterContainer {
+  display: inline;
+  white-space: nowrap;
+  border-bottom: 5px solid black;
+}
+
+.letterStatic {
+  display: inline;
+}
+
+.letterAnimTop {
+  display: inline;
+  position: absolute;
+  -webkit-animation: dropTop .1s ease;
+  -moz-animation: dropTop .1s ease;
+}
+
+.letterAnimBottom {
+  display: inline;
+  position: absolute;
+  -webkit-animation: dropBottom .1s ease;
+  -moz-animation: dropBottom .1s ease;
+}
+
+.blink {
+  position: static;
+  top: -5px;
+  -webkit-animation: blink 0.3s ease 0 infinite alternate;
+  -moz-animation: blink 0.3s ease 0 infinite alternate;
+}
+
+@-moz-keyframes blink {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@-webkit-keyframes blink {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@-moz-keyframes dropTop {
+  from {
+    -moz-transform: translateX(0) translateY(-20px) translateZ(20px) rotateX(90deg);
+    transform: translateX(0) translateY(-20px) translateZ(20px) rotateX(90deg);
+  }
+
+  to {
+    -moz-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg);
+    transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg);
+  }
+}
+
+@-moz-keyframes dropBottom {
+  from {
+    -moz-transform: translateY(20px) translateZ(20px) rotateX(-90deg);
+    transform: translateY(20px) translateZ(20px) rotateX(-90deg);
+  }
+
+  to {
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@-webkit-keyframes dropTop {
+  from { -webkit-transform: translateX(0) translateY(-20px) translateZ(20px) rotateX(90deg); }
+  to { -webkit-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg); }
+}
+
+@-webkit-keyframes dropBottom {
+  from { -webkit-transform: translateY(20px) translateZ(20px) rotateX(-90deg); }
+  to { -webkit-transform: rotateX(0deg); }
+}
+
+#googleMap {
+  height: 50%;
+  width: 50%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 250px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 30px;
+  margin-left: -100px;
+}
+
+.gm-style-iw {
+  color: black!important;
+}

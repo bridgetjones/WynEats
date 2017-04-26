@@ -1,0 +1,12 @@
+
+<div id="container">
+  <div id="input"></div>
+</div>
+
+<%#= form_tag('/usersearches', method: :get) do %>
+<%= form_tag('/search', method: :get) do %>
+  <div><%#= submit_tag 'Submit' %></div>
+  <input type="text" name="text" id="hiddenInput" >
+  <button id="button" class="Food_Submit" name="EnterSite" type="submit">Submit</button>
+
+  <% end %>

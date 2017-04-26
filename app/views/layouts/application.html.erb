@@ -1,14 +1,20 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <title>Vision</title>
-    <%= csrf_meta_tags %>
+
+  <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <!-- <button id="button" name="EnterSite">Click Me!!!</button>
+    <div id="container">
+        <div id="input"></div>
+        <input type="text" id="hiddenInput">
+    </div> -->
+
     <%= yield %>
-  </body>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyA01EzYhyyzXkYVo1UplOeXcZG27NsuO1E&libraries=places&callback=mapInit"></script>
+
+</body>
 </html>
