@@ -9,30 +9,31 @@ const array = new Array();
 const map_array= new Array();
 $(window).on('load', function(){
 
-  var QueryString = function () {
-  // This function is anonymous, is executed immediately and
-  // the return value is assigned to QueryString!
-  var query_string = {};
-  var query = window.location.search.substring(1);
-  var vars = query.split("&");
-  for (var i=0;i<vars.length;i++) {
-    var pair = vars[i].split("=");
-        // If first entry with this name
-    if (typeof query_string[pair[0]] === "undefined") {
-      query_string[pair[0]] = decodeURIComponent(pair[1]);
-        // If second entry with this name
-    } else if (typeof query_string[pair[0]] === "string") {
-      var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
-      query_string[pair[0]] = arr;
-        // If third or later entry with this name
-    } else {
-      query_string[pair[0]].push(decodeURIComponent(pair[1]));
-    }
-  }
-  return query_string;
-  }();
-  var input_query = QueryString.EnterSite.split('+').join(' ')
-  console.log(input_query);
+  // var QueryString = function () {
+  // // This function is anonymous, is executed immediately and
+  // // the return value is assigned to QueryString!
+  // var query_string = {};
+  // var query = window.location.search.substring(1);
+  // var vars = query.split("&");
+  // for (var i=0;i<vars.length;i++) {
+  //   var pair = vars[i].split("=");
+  //       // If first entry with this name
+  //   if (typeof query_string[pair[0]] === "undefined") {
+  //     query_string[pair[0]] = decodeURIComponent(pair[1]);
+  //       // If second entry with this name
+  //   } else if (typeof query_string[pair[0]] === "string") {
+  //     var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+  //     query_string[pair[0]] = arr;
+  //       // If third or later entry with this name
+  //   } else {
+  //     query_string[pair[0]].push(decodeURIComponent(pair[1]));
+  //   }
+  // }
+  // return query_string;
+  // }();
+  // var input_query = QueryString.EnterSite.split('+').join(' ')
+  // console.log(input_query);
+  
   $(function() {
     console.log('script loaded');
 
@@ -50,7 +51,7 @@ $(window).on('load', function(){
       infowindow = new google.maps.InfoWindow();
       service = new google.maps.places.PlacesService(map);
       service.textSearch({
-        query: [input_query],
+        query: [searchTerm],
         location: mycenter,
         radius: 500,
         opennow: true,
@@ -81,8 +82,6 @@ $(window).on('load', function(){
         console.dir(this.textContent);
       });
 
-
-
       function createMarker(place) {
         var placeLoc = place.geometry.location;
         var marker = new google.maps.Marker({
@@ -98,6 +97,7 @@ $(window).on('load', function(){
           $('ol').append('<ul id="name_list">'+ 'blah blah' + '</ul>');
           $('ol').children().remove()
           $('ol').append('<ul id="name_list">'+ infowindow.content + '</ul>');
+          $('#mbody_text').val(place.name + " " + place.formatted_address);
         });
         gmarkers.push(marker);
         function removeMarkers(gmarkers){
@@ -127,3 +127,13 @@ $(window).on('load', function(){
     google.maps.event.addDomListener(window, 'load', mapInit());
   });
 });
+
+// $('#mapbutton').click(function (){
+//
+//   $('#mapbutton').hide();
+//   $hiddenInput.value = "";
+// //   $
+// //   $
+// }() {
+//
+// })

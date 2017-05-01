@@ -7,31 +7,57 @@ body {
   font-size: 40px;
   color: #ffffff;
 }
-#button {
+#mainbutton {
   background-color: #187;
   border: 2px solid white;
   color: white;
   padding: 15px 32px;
   border-radius: 8px;
-  text-align: center;
+  text-align: auto;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   width: 250px;
   // margin-left: 475px;
   position: fixed;
-  top: 75%;
-  left: 52.5%;
+  top: 50%;
+  left: 50%;
   margin-top: 30px;
   margin-left: -100px;
 
 }
 
-#button:active {
+#mainbutton:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+#mapbutton {
+  background-color: #187;
+  border: 2px solid white;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 8px;
+  text-align: auto;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 140px;
+  // margin-left: 475px;
+  position: auto;
+  top: 10%;
+  margin-top: 30px;
+  margin-left: -140px;
+
+}
+
+#mapbutton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 
 #userinput {
   background-color: #1;
@@ -153,21 +179,27 @@ body {
 }
 
 #googleMap {
-  height: 50%;
-  width: 50%;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width: 250px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: 30px;
-  margin-left: -100px;
+height: 12em;
+width: 50%;
+margin: 1em;
 }
-
 .gm-style-iw {
   color: black!important;
+}
+
+#title_search {
+  text-align: center;
+  font-size: 2em;
+
+}
+
+#marker_list {
+  float: right;
+  list-style-position: inside;
+  text-align: right;
+}
+
+#div_list {
+  float: right;
+  width: 50%;
 }

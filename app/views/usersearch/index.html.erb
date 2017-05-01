@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,27 +6,40 @@
   <title></title>
 </head>
 <body>
-  <h6>Nearby Hot Spots!</h6>
-
-  <div id="googleMap">
+  <div id="title_search"> Nearby Hot Spots! </div>
+  <div id='div_list'>
+    <ol id="marker_list">
+    </ol>
   </div>
+  <div id="googleMap" >
+  </div>
+
+  <script>
+    var searchTerm = "<%= params[:EnterSite] %>";
+  </script>
 
   <div>
     <h6>Text your Friends to Meet You Here!</h6>
     </div>
-    <div>
-      <ol id="marker_list">
-      </ol>
 
-    </div>
 
-    <h6><form>
-    Your Name:<br>
-      <input type="text" id="name_sender" name="firstname" value="Ricky Bobby"><br>
-      Friend's Number:<br>
-      <input type="text" name="lastname" id="number_recipient" value="(123) 456-7869"><br><br>
-      <button id="button" name="EnterSite" type="submit">Submit</button>
-    </form></h6>
+    <!-- <h6><form> -->
+
+
+  <%= form_tag('/text') do %>
+<%= label_tag :phone%>
+
+  <%= text_field_tag :phone%>
+   <div>
+        <%= label_tag :name %>
+     <input type="text" id="name_sender" name="firstname" value="Ricky Bobby">
+
+   </div>
+
+
+      <input type="text" id="mbody_text">
+      <button id="mapbutton" name="EnterSite" type="submit">Submit</button>
+    <% end %>
     <div>
 
     </div>
